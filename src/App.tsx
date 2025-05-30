@@ -1,25 +1,68 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider, createTheme } from '@mui/material';
+import CssBaseline from '@mui/material/CssBaseline';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import About from './components/About';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import ParticleBackground from './components/ParticleBackground';
 import './App.css';
+import { Box } from '@mui/material';
+
+const theme = createTheme({
+  palette: {
+    mode: 'dark',
+    primary: {
+      main: '#64ffda',
+    },
+    secondary: {
+      main: '#e6f1ff',
+    },
+    background: {
+      default: '#0a192f',
+      paper: '#112240',
+    },
+  },
+  typography: {
+    fontFamily: 'Roboto, sans-serif',
+    h1: {
+      fontSize: '3.5rem',
+      fontWeight: 700,
+    },
+    h2: {
+      fontSize: '2.5rem',
+      fontWeight: 600,
+    },
+    h3: {
+      fontSize: '2rem',
+      fontWeight: 600,
+    },
+  },
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <ParticleBackground />
+      <Router basename="/portfolio">
+        <Box sx={{ minHeight: '100vh', bgcolor: 'background.default' }}>
+          <Navbar />
+          <main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/experience" element={<Experience />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </main>
+        </Box>
+      </Router>
+    </ThemeProvider>
   );
 }
 
