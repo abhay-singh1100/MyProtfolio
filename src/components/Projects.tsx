@@ -73,23 +73,14 @@ const ProjectCard = ({ project, index }: { project: any; index: number }) => {
 const Projects = () => {
   const projects = [
     {
-      title: 'Blockchain-Based E-Voting System',
-      period: 'Sep 2023 – Nov 2023',
+      title: 'Natural Language SQL Query System Using LLMs ',
+      period: 'May 2024 – Jun 2025',
       description: [
-        'Architected a blockchain-based e-voting system integrated with electoral infrastructure, cutting costs by $200,000 annually and improving election efficiency.',
-        'Automated smart contracts in Solidity with advanced cryptography, reducing security vulnerabilities by 35% and ensuring end-to-end voter data integrity.',
+        'Developed an NLP system using Mistral LLM to convert English to SQL with 95% accuracy, supporting joins, aggregations, and subqueries.',
+        'Integrated voice interface with Vosk (ASR) and pyttsx3 (TTS) for hands-free SQL querying (<500ms latency, 85% accuracy in noise).',
+        'Created a FastAPI + Streamlit app serving 100+ users; cut SQL query latency by 60% using SQLite and responsive UI design. ',
       ],
-      technologies: ['Blockchain', 'Solidity', 'Smart Contracts', 'Cryptography'],
-    },
-    {
-      title: 'Android Malware Detection System Using Machine Learning',
-      period: 'Nov 2024 – Jan 2025',
-      description: [
-        'Trained a stacking ensemble model (Logistic Regression, Random Forest, SVM) achieving 84.2% accuracy and 96.93% recall for Android malware detection with minimized false negatives.',
-        'Engineered a multi-phase pipeline using permission and behavioral analysis with Gradient Boosting-based feature selection and custom thresholds for risk-level classification.',
-        'Deployed a scalable malware detection system on 30,000+ apps using probability-based classification and meta-learning for enhanced real-world threat robustness.',
-      ],
-      technologies: ['Machine Learning', 'Python', 'Scikit-learn', 'Feature Engineering'],
+      technologies: ['NLP', 'LLM integration', 'voice interfaces', 'full-stack development (FastAPI, Streamlit)'],
     },
     {
       title: 'Real-Time Face Recognition Attendance System',
@@ -101,6 +92,27 @@ const Projects = () => {
       ],
       technologies: ['Flask', 'OpenCV', 'NumPy', 'RESTful APIs', 'Face Recognition'],
     },
+    
+    {
+      title: 'Android Malware Detection System Using Machine Learning',
+      period: 'Nov 2024 – Jan 2025',
+      description: [
+        'Trained a stacking ensemble model (Logistic Regression, Random Forest, SVM) achieving 84.2% accuracy and 96.93% recall for Android malware detection with minimized false negatives.',
+        'Engineered a multi-phase pipeline using permission and behavioral analysis with Gradient Boosting-based feature selection and custom thresholds for risk-level classification.',
+        'Deployed a scalable malware detection system on 30,000+ apps using probability-based classification and meta-learning for enhanced real-world threat robustness.',
+      ],
+      technologies: ['Machine Learning', 'Python', 'Scikit-learn', 'Feature Engineering'],
+    },
+    {
+      title: 'Blockchain-Based E-Voting System',
+      period: 'Sep 2023 – Nov 2023',
+      description: [
+        'Architected a blockchain-based e-voting system integrated with electoral infrastructure, cutting costs by $200,000 annually and improving election efficiency.',
+        'Automated smart contracts in Solidity with advanced cryptography, reducing security vulnerabilities by 35% and ensuring end-to-end voter data integrity.',
+      ],
+      technologies: ['Blockchain', 'Solidity', 'Smart Contracts', 'Cryptography'],
+    },
+    
   ];
 
   return (

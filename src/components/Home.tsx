@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Container, Typography, Button } from '@mui/material';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { useSpring, animated } from '@react-spring/web';
 
 const AnimatedText = ({ children, delay }: { children: React.ReactNode; delay: number }) => {
@@ -89,7 +89,7 @@ const Home = () => {
             color="secondary"
             sx={{ mb: 4, opacity: 0.8 }}
           >
-            I build things for the web.
+        I build intelligent systems powered by Data and the Web.
           </Typography>
         </AnimatedText>
 
@@ -105,15 +105,18 @@ const Home = () => {
               margin: '0 auto'
             }}
           >
-            I'm Abhay Singh, a B.Tech student at COER University with a strong interest in AI/ML, software development, and Full Stack Development. I've built scalable projects like an Android malware detector, a blockchain-based e-voting system, and real-time face recognition tools. Through internships at Maxim Design Systems and Infosys Springboard, I've developed expertise in Python, data analysis, and full-stack development. My goal is to create impactful, intelligent systems that drive innovation and solve real-world problems.
-          </Typography>
+          I'm a B.Tech student at COER University, with a strong interest in Artificial Intelligence, Machine Learning, Natural Language Processing, and Full-Stack Web Development. I specialize in building intelligent systems that transform data into actionable insights and scalable applications.
+
+          My core strengths lie in combining ML algorithms with robust backend architectures and interactive frontends, using tools like Python, React.js, FastAPI, and SQL/NoSQL databases. I’m driven by curiosity, precision, and a desire to solve real-world problems through clean, efficient, and meaningful code.
+
+
+                  </Typography>
         </AnimatedText>
 
         <AnimatedText delay={400}>
           <animated.div style={floatAnimation}>
             <Button
-              component={Link}
-              to="/projects"
+              href="#projects"
               variant="outlined"
               color="primary"
               size="large"
@@ -150,4 +153,4 @@ const Home = () => {
   );
 };
 
-export default Home; 
+export default Home;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+// import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 import Navbar from './components/Navbar';
@@ -48,20 +48,26 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <ParticleBackground />
-      <Router>
-        <Box sx={{ minHeight: '100vh', bgcolor: 'background.default' }}>
-          <Navbar />
-          <main>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/experience" element={<Experience />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-          </main>
-        </Box>
-      </Router>
+      <Box sx={{ minHeight: '100vh', bgcolor: 'background.default' }}>
+        <Navbar />
+        <main>
+          <section id="home">
+            <Home />
+          </section>
+          <section id="about">
+            <About />
+          </section>
+          <section id="experience">
+            <Experience />
+          </section>
+          <section id="projects">
+            <Projects />
+          </section>
+          <section id="contact">
+            <Contact />
+          </section>
+        </main>
+      </Box>
     </ThemeProvider>
   );
 }

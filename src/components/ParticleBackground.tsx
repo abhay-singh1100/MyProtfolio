@@ -1,16 +1,32 @@
-import { useCallback } from "react";
-import { Particles } from "@tsparticles/react";
+import { useCallback, useEffect, useState } from "react";
+import { Particles, initParticlesEngine } from "@tsparticles/react";
+import { type Container, type Engine } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
 
 const ParticleBackground = () => {
-  const customInit = useCallback(async (engine: any) => {
-    await loadSlim(engine);
+  const [init, setInit] = useState(false);
+
+  // this should be run only once per application lifetime
+  useEffect(() => {
+    initParticlesEngine(async (engine: Engine) => {
+      await loadSlim(engine);
+    }).then(() => {
+      setInit(true);
+    });
   }, []);
+
+  const particlesLoaded = useCallback(async (container: Container | undefined) => {
+    // Optional: Add any initialization after particles are loaded
+  }, []);
+
+  if (!init) {
+    return null;
+  }
 
   return (
     <Particles
       id="tsparticles"
-      particlesLoaded={customInit}
+      particlesLoaded={particlesLoaded}
       options={{
         background: {
           color: {

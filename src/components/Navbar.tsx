@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppBar, Toolbar, Button, Box } from '@mui/material';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -9,40 +9,35 @@ const Navbar = () => {
         <Box sx={{ flexGrow: 1 }} />
         <Box sx={{ display: 'flex', gap: 2 }}>
           <Button
-            component={Link}
-            to="/"
+            href="#home"
             color="secondary"
             sx={{ '&:hover': { color: 'primary.main' } }}
           >
             Home
           </Button>
           <Button
-            component={Link}
-            to="/about"
+            href="#about"
             color="secondary"
             sx={{ '&:hover': { color: 'primary.main' } }}
           >
             About
           </Button>
           <Button
-            component={Link}
-            to="/experience"
+            href="#experience"
             color="secondary"
             sx={{ '&:hover': { color: 'primary.main' } }}
           >
             Experience
           </Button>
           <Button
-            component={Link}
-            to="/projects"
+            href="#projects"
             color="secondary"
             sx={{ '&:hover': { color: 'primary.main' } }}
           >
             Projects
           </Button>
           <Button
-            component={Link}
-            to="/contact"
+            href="#contact"
             color="secondary"
             sx={{ '&:hover': { color: 'primary.main' } }}
           >
