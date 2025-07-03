@@ -79,7 +79,7 @@ This will create an optimized production build in the `build` folder.
 1. Ensure your `package.json` includes:
    - The `homepage` field:
      ```json
-     "homepage": "https://abhay-singh1100.github.io/MyPortfolio"
+     "homepage": "https://abhay-singh1100.github.io/MyProtfolio"
      ```
    - The following scripts:
      ```json
